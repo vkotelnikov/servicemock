@@ -1,7 +1,5 @@
 package kotelnikov.servicemock.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -14,8 +12,7 @@ import java.io.UncheckedIOException;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-@Configuration
-public class JsonConfig {
+public class JsonService {
 
     public static String readFileToString(String path) {
         Resource resource = getResource(path);

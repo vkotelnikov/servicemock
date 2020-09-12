@@ -1,6 +1,6 @@
 package kotelnikov.servicemock.controller;
 
-import kotelnikov.servicemock.config.JsonConfig;
+import kotelnikov.servicemock.config.JsonService;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,57 +14,55 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/dadata")
 public class DadataController {
 
-    JsonConfig jsonConfig;
-
     /*** Адреса ***/
 
     @GetMapping(path ="clean/address")
     public @ResponseBody String cleanAddress() {
-        return JsonConfig.readFileToString("dadata/clean-address.json");
+        return JsonService.readFileToString("dadata/clean-address.json");
     }
 
     @GetMapping(path ="suggest/address")
     public @ResponseBody String suggestAddress() {
-        return JsonConfig.readFileToString("dadata/suggest-address.json");
+        return JsonService.readFileToString("dadata/suggest-address.json");
     }
 
     @GetMapping(path ="findById/address")
     public @ResponseBody String findByIdAddress() {
-        return JsonConfig.readFileToString("dadata/find-by-id-address.json");
+        return JsonService.readFileToString("dadata/find-by-id-address.json");
     }
 
     @GetMapping(path ="findById/fias")
     public @ResponseBody String findByIdFias() {
-        return JsonConfig.readFileToString("dadata/find-by-id-fias.json");
+        return JsonService.readFileToString("dadata/find-by-id-fias.json");
     }
 
     /*** Компании ***/
 
     @GetMapping(path ="findById/party")
     public @ResponseBody String findByIdParty() {
-        return JsonConfig.readFileToString("dadata/find-by-id-party.json");
+        return JsonService.readFileToString("dadata/find-by-id-party.json");
     }
 
     @GetMapping(path ="suggest/party")
     public @ResponseBody String suggestParty() {
-        return JsonConfig.readFileToString("dadata/suggest-party.json");
+        return JsonService.readFileToString("dadata/suggest-party.json");
     }
 
     @GetMapping(path ="findAffiliated/party")
     public @ResponseBody String findAffiliatesParty() {
-        return JsonConfig.readFileToString("dadata/find-affiliated-party.json");
+        return JsonService.readFileToString("dadata/find-affiliated-party.json");
     }
 
     /*** Люди ***/
 
     @GetMapping(path ="clean/name")
     public @ResponseBody String cleanName() {
-        return JsonConfig.readFileToString("dadata/clean-name.json");
+        return JsonService.readFileToString("dadata/clean-name.json");
     }
 
     @GetMapping(path ="suggest/fio")
     public @ResponseBody String suggestFio() {
-        return JsonConfig.readFileToString("dadata/suggest-fio.json");
+        return JsonService.readFileToString("dadata/suggest-fio.json");
     }
 
 
@@ -72,19 +70,19 @@ public class DadataController {
 
     @GetMapping(path = "/sample")
     public ResponseEntity<Object> getSampleAsJson() {
-        Resource resource = JsonConfig.getResource("sample.json");
+        Resource resource = JsonService.getResource("sample.json");
         return new ResponseEntity<>(resource, HttpStatus.OK);
     }
 
     @GetMapping(path = "/sample-response-body")
     public @ResponseBody
     Resource getSampleAsResponseBody() {
-        return JsonConfig.getResource("sample.json");
+        return JsonService.getResource("sample.json");
     }
 
     @GetMapping(path = "/sample-string")
     public @ResponseBody
     String getSampleAsString() {
-        return JsonConfig.readFileToString("sample.json");
+        return JsonService.readFileToString("sample.json");
     }
 }
