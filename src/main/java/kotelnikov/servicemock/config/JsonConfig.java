@@ -17,16 +17,6 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 @Configuration
 public class JsonConfig {
 
-    @Bean
-    public String sampleString(){
-        return readFileToString("sample.json");
-    }
-
-    @Bean
-    public String dadataString() {
-        return readFileToString("dadata/clean-address.json");
-    }
-
     public static String readFileToString(String path) {
         Resource resource = getResource(path);
         return asOneLineString(resource);
