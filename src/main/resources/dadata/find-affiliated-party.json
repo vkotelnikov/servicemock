@@ -1,0 +1,29 @@
+{
+  "suggestions": [
+    {
+      "value": "ООО \"ДЗЕН.ПЛАТФОРМА\"",
+      "unrestricted_value": "ООО \"ДЗЕН.ПЛАТФОРМА\"",
+      "data": { "type": "platform" }
+    },
+    {
+      "value": "ООО \"ЕДАДИЛ\"",
+      "unrestricted_value": "ООО \"ЕДАДИЛ\"",
+      "data": { "type": "service" }
+    },
+    {
+      "value": "ООО \"ЗНАНИЕ\"",
+      "unrestricted_value": "ООО \"ЗНАНИЕ\"",
+      "data": { "type": "service" }
+    },
+    {
+      "value": "ООО \"НАПА\"",
+      "unrestricted_value": "ООО \"НАПА\"",
+      "data": { "type": "company" }
+    },
+    {
+      "value": "ООО \"ЯНДЕКС.ДРАЙВ\"",
+      "unrestricted_value": "ООО \"ЯНДЕКС.ДРАЙВ\"",
+      "data": { "type": "service" }
+    }
+  ]
+}

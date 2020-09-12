@@ -24,7 +24,7 @@ public class JsonConfig {
 
     @Bean
     public String dadataString() {
-        return readFileToString("dadata.json");
+        return readFileToString("dadata/clean-address.json");
     }
 
     public static String readFileToString(String path) {
